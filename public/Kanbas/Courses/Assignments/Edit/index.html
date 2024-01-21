@@ -1,0 +1,90 @@
+<html>
+
+<head></head>
+
+<body>
+    <form action="/Kanbas/Courses/Assignments/screen.html">
+    <select>
+        <option>
+            Speed Grader
+        </option>
+    </select>
+    <hr />
+    <h2>Assignment Name</h2>
+    <input value="A1 - ENV + HTML" />
+    <br />
+    <br />
+    <textarea>This is the assignment description.</textarea>
+    <br />
+    <br />
+    <label for="points">Points</label>
+    <br />
+    <input id="points" value="100" />
+    <br />
+    <br />
+    <label for="assignment-group">Assignment Group</label><br />
+    <select id="assignment-group">
+        <option>
+            ASSIGNMENTS
+        </option>
+        <option>
+            QUIZZES
+        </option>
+    </select>
+    <br />
+    <br />
+    <label for="display-grade">Display Grade as</label>
+    <select id="display-grade">
+        <option>
+            Percentage
+        </option>
+    </select>
+    <br />
+    <label>Submission Type</label><br />
+    <select>
+        <option>
+            Online
+        </option>
+    </select>
+    <br />
+    <br />
+    <label>Online Entry Options</label><br />
+    <input type="checkbox" value="TEXTENTRY" name="submission-check" id="text-entry" />
+    <label for="text-entry">Text Entry</label><br />
+    <input type="checkbox" value="WEBSITEURL" name="submission-check" id="website-URL" />
+    <label for="website-URL">Website URL</label><br />
+    <input type="checkbox" value="MEDIA" name="submission-check" id="media-recordings" />
+    <label for="media-recordings">Media Recordings</label><br />
+    <input type="checkbox" value="ANNOTATION" name="submission-check" id="student-annotation" />
+    <label for="student-annotation">Student Annotation</label><br />
+    <input type="checkbox" value="FILEUPLOAD" name="submission-check" id="file-uploads" />
+    <label for="file-uploads">File Uploads</label><br />
+    <br />
+    <label>Assign</label><br />
+    <label for="assign-to">Assign to</label><br />
+    <input id="assign-to" placeholder="Everyone" />
+    <br />
+    <br />
+    <label>Due Date</label><br />
+    <input type="date" value="2020-09-01" /><br />
+    <br />
+    <label for="available-from">Available from</label><br />
+    <input type="date" id="available-from" value="2021-01-01" /><br />
+    <br />
+    <label for="until">Until</label><br />
+    <input type="date" id="until" value="2021-01-01" /><br />
+    <br />
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    <button type="submit">Cancel</button>
+                    <button type="submit">Save</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</form>
+</body>
+
+</html>
