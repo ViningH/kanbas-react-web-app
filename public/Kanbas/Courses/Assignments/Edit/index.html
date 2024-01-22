@@ -3,10 +3,12 @@
 <head></head>
 
 <body>
-    <form action="/Kanbas/Courses/Assignments/screen.html">
     <select>
         <option>
             Speed Grader
+        </option>
+        <option>
+            Gradescope 1.3
         </option>
     </select>
     <hr />
@@ -33,17 +35,24 @@
     </select>
     <br />
     <br />
-    <label for="display-grade">Display Grade as</label>
+    <label for="display-grade">Display Grade as</label><br />
     <select id="display-grade">
         <option>
             Percentage
         </option>
+        <option>
+            Points
+        </option>
     </select>
+    <br />
     <br />
     <label>Submission Type</label><br />
     <select>
         <option>
             Online
+        </option>
+        <option>
+            In Person
         </option>
     </select>
     <br />
@@ -60,9 +69,17 @@
     <input type="checkbox" value="FILEUPLOAD" name="submission-check" id="file-uploads" />
     <label for="file-uploads">File Uploads</label><br />
     <br />
+    <label>Group Assignments</label><br />
+    <input type="checkbox" value="ENABLEGROUP" name="group-assignment" id="enable-group" />
+    <label for="enable-group">Enable Groups</label><br />
+    <br />
+    <label>Peer Reviews</label><br />
+    <input type="checkbox" value="PEERREVIEW" name="peer-reviews" id="peer-review" />
+    <label for="peer-review">Add Peer Review</label><br />
+    <br />
     <label>Assign</label><br />
     <label for="assign-to">Assign to</label><br />
-    <input id="assign-to" placeholder="Everyone" />
+    <input id="assign-to" value="Everyone" />
     <br />
     <br />
     <label>Due Date</label><br />
@@ -78,13 +95,18 @@
         <tbody>
             <tr>
                 <td>
-                    <button type="submit">Cancel</button>
-                    <button type="submit">Save</button>
+                    <a href="/Kanbas/Courses/Assignments/screen.html">
+                        <button>Cancel</button>
+                    </a>
+                </td>
+                <td>
+                    <a href="/Kanbas/Courses/Assignments/screen.html">
+                        <button>Save</button>
+                    </a>
                 </td>
             </tr>
         </tbody>
     </table>
-</form>
 </body>
 
 </html>
