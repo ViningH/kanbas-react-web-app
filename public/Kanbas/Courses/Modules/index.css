@@ -26,7 +26,29 @@
   border-top: 1px solid gray !important;
   border-left: 2px solid green;
 }
-
 .wd-modules > li {
   margin-bottom: 20px;
 }
+
+.wd-align-right {
+    text-align:right;
+    padding-top: 10px;
+    padding-right: 5px;
+}
+
+.wd-standard-button {
+    background-color: gainsboro;
+    border:none;
+    height: 35px;
+    padding-left: 10px;
+    padding-right:10px;
+ }
+
+.wd-red-button {
+    background-color: red;
+    color: white;
+    border:none;
+    height: 35px;
+    padding-left: 10px;
+    padding-right:10px;
+ }
