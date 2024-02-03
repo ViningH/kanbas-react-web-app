@@ -75,3 +75,32 @@
     background-color: green;
     color:white;
  }
+
+ .wd-main-content {
+    width: 100%;
+ }
+ .wd-breadcrumb {
+    --bs-breadcrumb-divider: '>';
+    padding: 10px;
+ }
+
+ .wd-breadcrumb a {
+    color:red;
+    text-decoration: none;
+ }
+
+ .wd-breadcrumb-button {
+    background-color: white;
+    border: none;
+    color:red;
+    padding-left:5px;
+    padding-right: 20px;
+    font-size: 25px;
+ }
+
+ 
+ @media screen and (max-width: 676px) {
+    .wd-breadcrumb {
+        background-color: black;
+    }
+  }
