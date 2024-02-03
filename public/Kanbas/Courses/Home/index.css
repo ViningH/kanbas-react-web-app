@@ -1,0 +1,77 @@
+.wd-modules,
+.wd-modules * {
+  border-radius: 0%;
+  border: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.wd-modules {
+  margin: 5px;
+}
+
+.wd-modules > li {
+  background-color: lightgray;
+  border: 1px solid gray !important;
+  border-left: none !important;
+}
+
+.wd-modules > li > div {
+  padding: 6px;
+  border-left: 1px solid gray !important;
+}
+
+.wd-modules > li > ul > li {
+  padding: 5px;
+  border-top: 1px solid gray !important;
+  border-left: 2px solid green;
+}
+.wd-modules > li {
+  margin-bottom: 20px;
+}
+
+.wd-align-right {
+    text-align:right;
+    padding-top: 10px;
+    padding-right: 5px;
+}
+
+.wd-standard-button {
+    background-color: gainsboro;
+    border:lightgray;
+    border-color:lightgray;
+    height: 35px;
+    border-radius: 3px;
+    border:2px;
+    padding-left: 10px;
+    padding-right:10px;
+ }
+
+.wd-red-button {
+    background-color: red;
+    color: white;
+    border-color:darkred;
+    border-radius: 3px;
+    border:2px;
+    height: 35px;
+    padding-left: 10px;
+    padding-right:10px;
+ }
+
+ .wd-status-container {
+    display: flex;
+    flex-direction: row;
+    width:200px;
+    padding: 2px;
+ }
+ .wd-flex-grow-1 {
+    flex-grow: 1;
+    background-color: gainsboro;
+    border-color:lightgray;
+    border-radius: 3px;
+    border:2px;
+ }
+ .wd-green-button {
+    background-color: green;
+    color:white;
+ }
