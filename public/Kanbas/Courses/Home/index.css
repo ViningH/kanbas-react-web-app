@@ -1,106 +1,140 @@
 .wd-modules,
 .wd-modules * {
-  border-radius: 0%;
-  border: none;
-  margin: 0px;
-  padding: 0px;
+    border-radius: 0%;
+    border: none;
+    margin: 0px;
+    padding: 0px;
 }
 
 .wd-modules {
-  margin: 5px;
+    margin: 5px;
 }
 
-.wd-modules > li {
-  background-color: lightgray;
-  border: 1px solid gray !important;
-  border-left: none !important;
+.wd-modules>li {
+    background-color: lightgray;
+    border: 1px solid gray !important;
+    border-left: none !important;
 }
 
-.wd-modules > li > div {
-  padding: 6px;
-  border-left: 1px solid gray !important;
+.wd-modules>li>div {
+    padding: 6px;
+    border-left: 1px solid gray !important;
 }
 
-.wd-modules > li > ul > li {
-  padding: 5px;
-  border-top: 1px solid gray !important;
-  border-left: 2px solid green;
+.wd-modules>li>ul>li {
+    padding: 5px;
+    border-top: 1px solid gray !important;
+    border-left: 2px solid green;
 }
-.wd-modules > li {
-  margin-bottom: 20px;
+
+.wd-modules>li {
+    margin-bottom: 20px;
 }
 
 .wd-align-right {
-    text-align:right;
+    text-align: right;
     padding-top: 10px;
     padding-right: 5px;
 }
 
 .wd-standard-button {
     background-color: gainsboro;
-    border:lightgray;
-    border-color:lightgray;
+    border: lightgray;
+    border-color: lightgray;
     height: 35px;
     border-radius: 3px;
-    border:2px;
+    border: 2px;
     padding-left: 10px;
-    padding-right:10px;
- }
+    padding-right: 10px;
+}
 
 .wd-red-button {
     background-color: red;
     color: white;
-    border-color:darkred;
+    border-color: darkred;
     border-radius: 3px;
-    border:2px;
+    border: 2px;
     height: 35px;
     padding-left: 10px;
-    padding-right:10px;
- }
+    padding-right: 10px;
+}
 
- .wd-status-container {
+.wd-status-container {
     display: flex;
     flex-direction: row;
-    width:200px;
+    width: 200px;
     padding: 2px;
- }
- .wd-flex-grow-1 {
+}
+
+.wd-flex-grow-1 {
     flex-grow: 1;
     background-color: gainsboro;
-    border-color:lightgray;
+    border-color: lightgray;
     border-radius: 3px;
-    border:2px;
- }
- .wd-green-button {
+    border: 2px;
+}
+
+.wd-green-button {
     background-color: green;
-    color:white;
- }
+    color: white;
+}
 
- .wd-main-content {
+.wd-main-content {
     width: 100%;
- }
- .wd-breadcrumb {
+}
+
+.wd-breadcrumb {
     --bs-breadcrumb-divider: '>';
-    padding: 10px;
- }
+    padding-inline: 10px;
+    padding-top: 10px;
+    border-bottom: 1px solid lightgrey !important;
+    margin-bottom: 10px;
+}
 
- .wd-breadcrumb a {
-    color:red;
+.wd-breadcrumb a {
+    color: red;
     text-decoration: none;
- }
+}
 
- .wd-breadcrumb-button {
+.wd-breadcrumb-button {
     background-color: white;
     border: none;
-    color:red;
-    padding-left:5px;
+    color: red;
+    padding-left: 5px;
     padding-right: 20px;
     font-size: 25px;
- }
+}
 
- 
- @media screen and (max-width: 676px) {
+
+@media screen and (max-width: 767px) {
     .wd-breadcrumb {
         background-color: black;
+        color: white;
+        width: 100%;
+        height: 55px;
     }
-  }
+
+    .wd-breadcrumb-button {
+        background-color: black;
+        color: white;
+    }
+
+    .wd-breadcrumb a {
+        color: white;
+        text-decoration: none;
+        position: absolute;
+        left: 36%;
+        display: block;
+        top: 0;
+        text-align: center;
+    }
+    .wd-dropdown-navigation {
+        list-style: none;
+      }
+
+      .wd-dropdown-navigation a {
+        color: red;
+        text-decoration: none;
+        padding: 5px;
+      }
+}
