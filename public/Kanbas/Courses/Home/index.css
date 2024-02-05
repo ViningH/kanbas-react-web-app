@@ -105,6 +105,10 @@
     font-size: 25px;
 }
 
+.wd-main-content-padding {
+    padding: 10px;
+}
+
 
 @media screen and (max-width: 767px) {
     .wd-breadcrumb {
