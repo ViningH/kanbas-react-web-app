@@ -52,3 +52,8 @@
     padding-left: 10px;
     padding-right:10px;
  }
+
+ .wd-red-link {
+    text-decoration: none;
+    color: red;
+ }

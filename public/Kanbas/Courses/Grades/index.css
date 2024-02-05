@@ -1,0 +1,14 @@
+.wd-center-table-items {
+    text-align:center;
+    vertical-align: middle;
+}
+.wd-left-align-table-items {
+    text-align: left;
+    vertical-align: middle;
+    color: red !important;
+}
+
+.wd-table-heading-item {
+    text-align: left;
+    vertical-align: middle;
+}
