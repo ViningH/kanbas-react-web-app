@@ -15,6 +15,10 @@
   .wd-kanbas-navigation li.wd-active a {
     color: red;
   }
+
+  .wd-kanbas-navigation li.wd-active a i.wd-account-active {
+    color: grey;
+  }
   .wd-kanbas-navigation a {
     color: white;
     text-decoration: none;
