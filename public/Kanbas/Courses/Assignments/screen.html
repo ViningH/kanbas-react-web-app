@@ -15,9 +15,9 @@
 
 <body>
     <!-- Implement links to Kanbas and Course Navigation -->
-    <div class="d-flex" style="height: 100%;">
+    <div class="d-flex wd-page-height">
         <div class="d-none d-md-block">
-            <ul class="wd-kanbas-navigation">
+            <ul class="wd-kanbas-navigation wd-page-height">
                 <li><a class="wd-n-text" href="http://northeastern.edu">N</a></li>
                 <li><a href="/Kanbas/Account/Profile/screen.html">
                         <i class="fa fa-user-circle-o wd-account-icon"></i><br />Account</a></li>
@@ -47,7 +47,7 @@
                         <button class="wd-breadcrumb-button">
                             <i class="fa fa-bars" aria-hidden="true"></i>
                         </button>
-                        <li class="breadcrumb-item"><a href="#">CS4550.12631.202410</a></li>
+                        <li class="breadcrumb-item"><a href="/Kanbas/Dashboard/screen.html">CS4550.12631.202410</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Assignments</li>
                     </ol>
                 </nav>
@@ -108,6 +108,20 @@
                         <li><a href="/Kanbas/Courses/Grades/screen.html"><i class="fa-solid fa-file-lines"></i>
                                 Grades</a></li>
                         <li><a href="#"><i class="fa-solid fa-users"></i> People</a></li>
+                        <li><a href="#">
+                                <i class="fa-solid fa-plug"></i>
+                                Panopto Video</a></li>
+                        <li><a href="#">
+                                <i class="fa-regular fa-comments"></i>
+                                Discussions</a></li>
+                        <li><a href="#">
+                                <i class="fa-solid fa-bullhorn"></i>
+                                Announcements</a></li>
+                        <li><a href="#"><i class="fa-solid fa-file-lines"></i>
+                                Syllabus</a></li>
+                        <li><a href="/Kanbas/Courses/Settings/CourseDetails/screen.html">
+                                <i class="fa-solid fa-gear"></i>
+                                Settings</a></li>
                     </ul>
                 </div>
             </div>
@@ -115,6 +129,9 @@
                 <div class="d-none d-md-block">
 
                     <ul class="wd-navigation">
+                        <li class="wd-top-navi-text">
+                            202430_2 Fall 2024
+                        </li>
                         <li>
                             <a href="/Kanbas/Courses/Home/screen.html">Home</a>
                         </li>
@@ -129,6 +146,16 @@
                         <li><a href="#">Quizzes</a></li>
                         <li><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
                         <li><a href="#">People</a></li>
+                        <li><a href="#">
+                                Panopto Video</a></li>
+                        <li><a href="#">
+                                Discussions</a></li>
+                        <li><a href="#">
+                                Announcements</a></li>
+                        <li><a href="#">
+                                Syllabus</a></li>
+                        <li><a href="/Kanbas/Courses/Settings/CourseDetails/screen.html">
+                                Settings</a></li>
                     </ul>
                 </div>
                 <div class="flex-fill wd-main-content-padding">
@@ -161,7 +188,10 @@
                                             <i class="fa fa-pencil-square-o"></i>
                                         </div>
                                         <div class="flex-fill wd-assignment-text-padding">
-                                            <h4>A1 SETUP </h4>
+                                            <a class="wd-assignment-title-link"
+                                                href="/Kanbas/Courses/Assignments/Edit/screen.html">
+                                                <h4>A1 SETUP </h4>
+                                            </a>
                                             Week 0 - SETUP - Week starting on Monday September 5th (9/5/2022) Module
                                             |<br />
                                             Due Sep 18, 2022 at 11:59pm | 100 pts
@@ -184,7 +214,10 @@
                                             <i class="fa fa-pencil-square-o"></i>
                                         </div>
                                         <div class="flex-fill wd-assignment-text-padding">
-                                            <h4>A2 HTML </h4>
+                                            <a class="wd-assignment-title-link"
+                                                href="/Kanbas/Courses/Assignments/Edit/screen.html">
+                                                <h4>A2 HTML </h4>
+                                            </a>
                                             Week 1 - HTML - Week starting on Monday September 12th (9/12/2022) Module
                                             |<br />
                                             Due Sep 25, 2022 at 11:59pm | 100 pts
@@ -206,7 +239,10 @@
                                             <i class="fa fa-pencil-square-o"></i>
                                         </div>
                                         <div class="flex-fill wd-assignment-text-padding">
-                                            <h4>A3 CSS </h4>
+                                            <a class="wd-assignment-title-link"
+                                                href="/Kanbas/Courses/Assignments/Edit/screen.html">
+                                                <h4>A3 CSS </h4>
+                                            </a>
                                             Week 2 - CSS - Week starting on Monday September 19th (9/19/2022) Module
                                             |<br />
                                             Due Oct 2nd, 2022 at 11:59pm | 100 pts
@@ -228,7 +264,10 @@
                                             <i class="fa fa-pencil-square-o"></i>
                                         </div>
                                         <div class="flex-fill wd-assignment-text-padding">
-                                            <h4>A4 BOOTSTRAP </h4>
+                                            <a class="wd-assignment-title-link"
+                                                href="/Kanbas/Courses/Assignments/Edit/screen.html">
+                                                <h4>A4 BOOTSTRAP </h4>
+                                            </a>
                                             Week 3 - Bootstrap - Week starting on Monday September 26th (9/26/2022)
                                             Module |<br />
                                             Due Oct 10th, 2022 at 11:59pm | 100 pts
@@ -250,7 +289,10 @@
                                             <i class="fa fa-pencil-square-o"></i>
                                         </div>
                                         <div class="flex-fill wd-assignment-text-padding">
-                                            <h4>A5 JAVASCRIPT </h4>
+                                            <a class="wd-assignment-title-link"
+                                                href="/Kanbas/Courses/Assignments/Edit/screen.html">
+                                                <h4>A5 JAVASCRIPT </h4>
+                                            </a>
                                             Week 4 - JavaScript - Week starting on Monday October 3rd (10/3/2022) Module
                                             |<br />
                                             Due Oct 16, 2022 at 11:59pm | 100 pts
@@ -272,7 +314,10 @@
                                             <i class="fa fa-pencil-square-o"></i>
                                         </div>
                                         <div class="flex-fill wd-assignment-text-padding">
-                                            <h4>A6 REACT </h4>
+                                            <a class="wd-assignment-title-link"
+                                                href="/Kanbas/Courses/Assignments/Edit/screen.html">
+                                                <h4>A6 REACT </h4>
+                                            </a>
                                             Week 5 - React & Routing - Week starting on Monday October 10th (10/10/2022)
                                             Module |<br />
                                             Due Oct 23, 2022 at 11:59pm | 100 pts

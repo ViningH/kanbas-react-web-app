@@ -17,7 +17,7 @@
     <!-- Implement links to Kanbas and Course Navigation -->
     <div class="d-flex">
         <div class="d-none d-md-block">
-            <ul class="wd-kanbas-navigation">
+            <ul class="wd-kanbas-navigation wd-page-height">
                 <li><a class="wd-n-text" href="http://northeastern.edu">N</a></li>
                 <li><a href="/Kanbas/Account/Profile/screen.html">
                         <i class="fa fa-user-circle-o wd-account-icon"></i><br />Account</a></li>
@@ -26,15 +26,15 @@
                         <i class="fa fa-tachometer"></i><br />Dashboard</a>
                 </li>
                 <li class="wd-active"><a href="/Kanbas/Courses/Home/screen.html">
-                    <i class="fa fa-book"></i>Courses</a> </li>
+                        <i class="fa fa-book"></i>Courses</a> </li>
                 <li><a href="#"><i class="fa fa-calendar"></i><br />Calendar</a></li>
                 <li><a href="#"><i class="fa fa-inbox"></i>
-                    <br />Inbox</a></li>
+                        <br />Inbox</a></li>
                 <li><a href="#"><i class="fa fa-clock-o"></i><br />History</a></li>
                 <li><a href="#"><i class="fa fa-television"></i><br />Studio</a></li>
                 <li><a href="#"><i class="fa-solid fa-share-from-square"></i><br />Commons</a></li>
                 <li><a href="#"><i class="fa fa-question-circle-o"></i>
-                <br />Help</a></li>
+                        <br />Help</a></li>
             </ul>
         </div>
         <div class="wd-main-content">
@@ -44,7 +44,7 @@
                         <button class="wd-breadcrumb-button">
                             <i class="fa fa-bars" aria-hidden="true"></i>
                         </button>
-                        <li class="breadcrumb-item"><a href="#">CS4550.12631.202410</a></li>
+                        <li class="breadcrumb-item"><a href="/Kanbas/Dashboard/screen.html">CS4550.12631.202410</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Grades</li>
                     </ol>
                 </nav>
@@ -52,9 +52,10 @@
             <div class="d-md-none">
                 <nav class="wd-breadcrumb" area-label="breadcrumb">
                     <div class="pull-right"><button class="wd-breadcrumb-button">
-                        <button class="wd-breadcrumb-button"  type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseCourseNavi" aria-expanded="false" aria-controls="collapseCourseNavi"><i class="fa fa-chevron-down"
-                                aria-hidden="true"></i></button>
+                            <button class="wd-breadcrumb-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseCourseNavi" aria-expanded="false"
+                                aria-controls="collapseCourseNavi"><i class="fa fa-chevron-down"
+                                    aria-hidden="true"></i></button>
                     </div>
                     <button class="wd-breadcrumb-button" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseKanbasNavi" aria-expanded="false" aria-controls="collapseKanbasNavi">
@@ -90,16 +91,33 @@
                             <a href="/Kanbas/Courses/Home/screen.html"><i class="fa-solid fa-house"></i> Home</a>
                         </li>
                         <li>
-                            <a href="/Kanbas/Courses/Modules/screen.html"><i class="fa-brands fa-ubuntu"></i> Modules</a>
+                            <a href="/Kanbas/Courses/Modules/screen.html"><i class="fa-brands fa-ubuntu"></i>
+                                Modules</a>
                         </li>
                         <li><a href="http://piazza.com"><i class="fa-solid fa-plug"></i> Piazza</a></li>
                         <li><a href="#"><i class="fa-solid fa-plug"></i> Zoom</a></li>
                         <li>
-                            <a href="/Kanbas/Courses/Assignments/screen.html"><i class="fa-solid fa-file-export"></i> Assignments</a>
+                            <a href="/Kanbas/Courses/Assignments/screen.html"><i class="fa-solid fa-file-export"></i>
+                                Assignments</a>
                         </li>
                         <li><a href="#"><i class="fa-solid fa-rocket"></i> Quizzes</a></li>
-                        <li><a href="/Kanbas/Courses/Grades/screen.html"><i class="fa-solid fa-file-lines"></i> Grades</a></li>
+                        <li><a href="/Kanbas/Courses/Grades/screen.html"><i class="fa-solid fa-file-lines"></i>
+                                Grades</a></li>
                         <li><a href="#"><i class="fa-solid fa-users"></i> People</a></li>
+                        <li><a href="#">
+                                <i class="fa-solid fa-plug"></i>
+                                Panopto Video</a></li>
+                        <li><a href="#">
+                                <i class="fa-regular fa-comments"></i>
+                                Discussions</a></li>
+                        <li><a href="#">
+                                <i class="fa-solid fa-bullhorn"></i>
+                                Announcements</a></li>
+                        <li><a href="#"><i class="fa-solid fa-file-lines"></i>
+                                Syllabus</a></li>
+                        <li><a href="/Kanbas/Courses/Settings/CourseDetails/screen.html">
+                                <i class="fa-solid fa-gear"></i>
+                                Settings</a></li>
                     </ul>
                 </div>
             </div>
@@ -107,6 +125,9 @@
                 <div class="d-none d-md-block">
 
                     <ul class="wd-navigation">
+                        <li class="wd-top-navi-text">
+                            202430_2 Fall 2024
+                        </li>
                         <li>
                             <a href="/Kanbas/Courses/Home/screen.html">Home</a>
                         </li>
@@ -121,6 +142,16 @@
                         <li><a href="#">Quizzes</a></li>
                         <li class="wd-active"><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
                         <li><a href="#">People</a></li>
+                        <li><a href="#">
+                                Panopto Video</a></li>
+                        <li><a href="#">
+                                Discussions</a></li>
+                        <li><a href="#">
+                                Announcements</a></li>
+                        <li><a href="#">
+                                Syllabus</a></li>
+                        <li><a href="/Kanbas/Courses/Settings/CourseDetails/screen.html">
+                                Settings</a></li>
                     </ul>
                 </div>
                 <div class="flex-fill wd-main-content-padding">
@@ -185,31 +216,40 @@
                                 <tr>
                                     <th class="wd-table-heading-item">Student Name</th>
                                     <th>
-                                        <h5>A1 SETUP</h5><h6>Out of 100</h6>
+                                        <h5>A1 SETUP</h5>
+                                        <h6>Out of 100</h6>
                                     </th>
                                     <th>
-                                        <h5>A2 HTML</h5><h6>Out of 100</h6>
+                                        <h5>A2 HTML</h5>
+                                        <h6>Out of 100</h6>
                                     </th>
                                     <th>
-                                        <h5>A3 CSS</h5><h6>Out of 100</h6>
+                                        <h5>A3 CSS</h5>
+                                        <h6>Out of 100</h6>
                                     </th>
                                     <th>
-                                        <h5>A4 BOOTSTRAP</h5><h6>Out of 100</h6>
+                                        <h5>A4 BOOTSTRAP</h5>
+                                        <h6>Out of 100</h6>
                                     </th>
                                     <th>
-                                        <h5>A5 JAVASCRIPT</h5><h6>Out of 100</h6>
+                                        <h5>A5 JAVASCRIPT</h5>
+                                        <h6>Out of 100</h6>
                                     </th>
                                     <th>
-                                        <h5>A6 REACT</h5><h6>Out of 100</h6>
+                                        <h5>A6 REACT</h5>
+                                        <h6>Out of 100</h6>
                                     </th>
                                     <th>
-                                        <h5>A7 REDUX</h5><h6>Out of 100</h6>
+                                        <h5>A7 REDUX</h5>
+                                        <h6>Out of 100</h6>
                                     </th>
                                     <th>
-                                        <h5>A8 NODE</h5><h6>Out of 100</h6>
+                                        <h5>A8 NODE</h5>
+                                        <h6>Out of 100</h6>
                                     </th>
                                     <th>
-                                        <h5>A9 MONGO</h5><h6>Out of 100</h6>
+                                        <h5>A9 MONGO</h5>
+                                        <h6>Out of 100</h6>
                                     </th>
                                 </tr>
                             </thead>
@@ -373,7 +413,7 @@
                             </tbody>
                         </table>
                     </div>
-                
+
                 </div>
             </div>
         </div>

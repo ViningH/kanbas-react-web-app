@@ -1,89 +1,88 @@
 <html>
 
-<head></head>
+<head>
+    <link rel="stylesheet" href="/libs/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/Kanbas/styles.css" />
+    <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Navigation/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Home/index.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/Kanbas/Courses/Modules/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Grades/index.css" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.css" rel="stylesheet" />
+</head>
 
 <body>
-    <h2>Jose Annunziato</h2>
+    <div class="wd-align-right">
+        <a href="/Kanbas/Account/Profile/screen.html">
+            <button class="wd-standard-button"><i class="fa fa-pencil-square-o"></i> Cancel Editing</button>
+        </a>
+    </div>
     <br />
-    <label>Name:* </label><input value="Jose Annunziato" />
+    <label>Name:* </label>
+    <input class="form-control" value="Jose Annunziato" />
+    <br />
     <label>Pronouns: </label>
-    <select>
+    <select class="form-control">
         <option>None</option>
         <option>She/Her</option>
         <option>He/Him</option>
         <option>They/Them</option>
     </select>
     <br />
+    <label>Title: </label><input class="form-control" />
     <br />
-    <label>Title: </label><input />
     <br />
     <h3>Contact</h3>
-    No registered services, you can add some on the <a href="#">settings</a> page.
+    No registered services, you can add some on the <a class="wd-red-link" href="#">settings</a> page.
+    <br />
+    <br />
     <h3>Biography</h3>
     <br />
-    <textarea>Faculty, Software Engineer, AI, Space, and renewables enthusiast.</textarea>
+    <textarea class="form-control">Faculty, Software Engineer, AI, Space, and renewables enthusiast.</textarea>
+    <br />
+    <br />
     <h3>Links</h3>
     <ul>
-        <li><a href="#">YouTube 🔗 Links to an external site.</a></li>
+        <li><a class="wd-red-link" href="#">YouTube 🔗 Links to an external site.</a></li>
     </ul>
-    <table>
-        <thead>
-            <tr>
-                <th>
-                    Title
-                </th>
-                <th>
-                </th>
-                <th>
-                    URL
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>
-                    <input value="YouTube" />
-                </td>
-                <td>
-                    →
-                </td>
-                <td>
-                    <input value="https://www.youtube.com" />
-                </td>
-                <td>
-                    <a href="#">Remove</a>
-                </td>
-            </tr>
-            <tr>
-                <td><button>Add another link</button></td>
-            </tr>
-            <tr>
-                <td>
-
-                    <button>Cancel</button>
-
-
-                    <a href="/Kanbas/Account/Profile/screen.html">
-                        <button>Save Profile</button>
-                    </a>
-
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="/Kanbas/Account/Profile/Edit/screen.html">
-                        <button>
-                            Edit Profile
-                        </button>
-                    </a>
-
-                    <a href="/Kanbas/Account/Profile/screen.html">
-                        <button>Cancel Editing</button>
-                    </a>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="row">
+        <div class="col-3">
+            <strong>Title</strong>
+        </div>
+        <div class="col-1">
+            &emsp;
+        </div>
+        <div class="col-3">
+            <strong>URL</strong>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <input class="form-control" value="YouTube" />
+        </div>
+        <div class="col-1">
+            →
+        </div>
+        <div class="col-3">
+            <input class="form-control" value="https://www.youtube.com" />
+        </div>
+        <div class="col-1">
+            <a class="wd-red-link" href="#">Remove</a>
+        </div>
+    </div>
+    <br />
+    <button class="wd-standard-button">Add another link</button></td>
+    <hr />
+    <div class="wd-align-right">
+        <a class="wd-red-link" href="/Kanbas/Account/Profile/screen.html">
+            <button class="wd-standard-button">Cancel</button>
+        </a>
+        <a class="wd-red-link" href="/Kanbas/Account/Profile/screen.html">
+            <button class="wd-red-button">Save Profile</button>
+        </a>
+    </div>
 </body>
 
 </html>
