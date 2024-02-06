@@ -36,3 +36,6 @@
     color: white;
   }
   
+  .wd-page-height {
+    height: 100% !important;
+  }

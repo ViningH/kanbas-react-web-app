@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/Kanbas/Courses/Home/index.css" />
     <link rel="stylesheet" href="/Kanbas/Courses/Modules/index.css" />
     <link rel="stylesheet" href="/Kanbas/Courses/Assignments/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Settings/index.css" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.css" rel="stylesheet" />
 </head>
@@ -157,278 +158,218 @@
                     </ul>
                 </div>
                 <div class="flex-fill wd-main-content-padding">
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <a href="/Kanbas/Courses/Settings/CourseDetails/screen.html">Course Details</a>
-                                </td>
-                                <td>
-                                    <a href="#">Sections</a>
-                                </td>
-                                <td>
-                                    <a href="/Kanbas/Courses/Settings/Navigation/screen.html">Navigation</a>
-                                </td>
-                                <td>
-                                    <a href="#">Apps</a>
-                                </td>
-                                <td>
-                                    <a href="#">Feature Options</a>
-                                </td>
-                                <td>
-                                    <a href="#">Integrations</a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <ul class="nav nav-tabs wd-settings-links">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Kanbas/Courses/Settings/CourseDetails/screen.html">Course
+                                Details</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sections</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active"
+                                href="/Kanbas/Courses/Settings/Navigation/screen.html">Navigation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Apps</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Feature Options</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Integrations</a>
+                        </li>
+                    </ul>
                     <br />
-                    Drag and drop items to reorder them in the course navigation.
+                    <h5>Drag and drop items to reorder them in the course navigation.</h5>
                     <br />
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <i class="fa fa-ellipsis-v"></i> &emsp; Home
+                            <span class="float-end">
+                                <i class="fa fa-check-circle text-success"></i>
+                                <i class="fa fa-ellipsis-v ms-2"></i>
+                            </span>
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fa fa-ellipsis-v"></i> &emsp; Module
+                            <span class="float-end">
+                                <i class="fa fa-check-circle text-success"></i>
+                                <i class="fa fa-ellipsis-v ms-2"></i>
+                            </span>
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fa fa-ellipsis-v"></i> &emsp; Piazza
+                            <span class="float-end">
+                                <i class="fa fa-check-circle text-success"></i>
+                                <i class="fa fa-ellipsis-v ms-2"></i>
+                            </span>
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fa fa-ellipsis-v"></i> &emsp; Zoom Meetings
+                            <span class="float-end">
+                                <i class="fa fa-check-circle text-success"></i>
+                                <i class="fa fa-ellipsis-v ms-2"></i>
+                            </span>
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fa fa-ellipsis-v"></i> &emsp; Assignments
+                            <span class="float-end">
+                                <i class="fa fa-check-circle text-success"></i>
+                                <i class="fa fa-ellipsis-v ms-2"></i>
+                            </span>
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fa fa-ellipsis-v"></i> &emsp; Quizzes
+                            <span class="float-end">
+                                <i class="fa fa-check-circle text-success"></i>
+                                <i class="fa fa-ellipsis-v ms-2"></i>
+                            </span>
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fa fa-ellipsis-v"></i> &emsp; Grades
+                            <span class="float-end">
+                                <i class="fa fa-check-circle text-success"></i>
+                                <i class="fa fa-ellipsis-v ms-2"></i>
+                            </span>
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fa fa-ellipsis-v"></i> &emsp; People
+                            <span class="float-end">
+                                <i class="fa fa-check-circle text-success"></i>
+                                <i class="fa fa-ellipsis-v ms-2"></i>
+                            </span>
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fa fa-ellipsis-v"></i> &emsp; Panopto Video
+                            <span class="float-end">
+                                <i class="fa fa-check-circle text-success"></i>
+                                <i class="fa fa-ellipsis-v ms-2"></i>
+                            </span>
+                        </li>
+                    </ul>
+
                     <br />
-                    <table border="1" width="100%">
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <h4>Home</h4>
-                                </td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h4>Module</h4>
-                                    
-                                    
-                                </td>
-                                <td>
-                                    <button>⋮</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h4>Piazza</h4>
-                                    
-                                    
-                                </td>
-                                <td>
-                                    <button>⋮</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h4>Zoom Meetings</h4>
-                                    
-                
-                                </td>
-                                <td>
-                                    <button>⋮</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h4>Assignments</h4>
-                                    
-                                    
-                                </td>
-                                <td>
-                                    <button>⋮</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h4>Quizzes</h4>
-                                    
-                                    
-                                </td>
-                                <td>
-                                    <button>⋮</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h4>Grades</h4>
-                                    
-                                    
-                                </td>
-                                <td>
-                                    <button>⋮</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h4>People</h4>
-                                    
-                                    
-                                </td>
-                                <td>
-                                    <button>⋮</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h4>Panopto Video</h4>
-                                    
-                                    
-                                </td>
-                                <td>
-                                    <button>⋮</button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <h5>Drag items here to hide them from students.</h5>
+                    Disabling most pages will cause students who visit those pages to be redirected to the course home
+                    page.<br />
                     <br />
-                    <h4>Drag items here to hide them from students.</h4><br />
-                    Disabling most pages will cause students who visit those pages to be redirected to the course home page.<br />
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <i class="fa fa-ellipsis-v"></i> &emsp; Chat
+                            <span class="float-end">
+                                <i class="fa fa-check-circle text-success"></i>
+                                <i class="fa fa-ellipsis-v ms-2"></i>
+                            </span>
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fa fa-ellipsis-v"></i> &emsp; SCORM
+                            <span class="float-end">
+                                <i class="fa fa-check-circle text-success"></i>
+                                <i class="fa fa-ellipsis-v ms-2"></i>
+                            </span>
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fa fa-ellipsis-v"></i> &emsp; Attendance
+                            <span class="float-end">
+                                <i class="fa fa-check-circle text-success"></i>
+                                <i class="fa fa-ellipsis-v ms-2"></i>
+                            </span>
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fa fa-ellipsis-v"></i> &emsp; Barnes and Noble Bookstore
+                            <span class="float-end">
+                                <i class="fa fa-check-circle text-success"></i>
+                                <i class="fa fa-ellipsis-v ms-2"></i>
+                            </span>
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fa fa-ellipsis-v"></i> &emsp; Digication
+                            <span class="float-end">
+                                <i class="fa fa-check-circle text-success"></i>
+                                <i class="fa fa-ellipsis-v ms-2"></i>
+                            </span>
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fa fa-ellipsis-v"></i> &emsp; Top Hat
+                            <span class="float-end">
+                                <i class="fa fa-check-circle text-success"></i>
+                                <i class="fa fa-ellipsis-v ms-2"></i>
+                            </span>
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fa fa-ellipsis-v"></i> &emsp; Syllabus
+                            <span class="float-end">
+                                <i class="fa fa-check-circle text-success"></i>
+                                <i class="fa fa-ellipsis-v ms-2"></i>
+                            </span>
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fa fa-ellipsis-v"></i> &emsp; Perusall
+                            <span class="float-end">
+                                <i class="fa fa-check-circle text-success"></i>
+                                <i class="fa fa-ellipsis-v ms-2"></i>
+                            </span>
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fa fa-ellipsis-v"></i> &emsp; Microsoft Teams Meetings
+                            <span class="float-end">
+                                <i class="fa fa-check-circle text-success"></i>
+                                <i class="fa fa-ellipsis-v ms-2"></i>
+                            </span>
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fa fa-ellipsis-v"></i> &emsp; FACT Reporting and Photo Roster
+                            <span class="float-end">
+                                <i class="fa fa-check-circle text-success"></i>
+                                <i class="fa fa-ellipsis-v ms-2"></i>
+                            </span>
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fa fa-ellipsis-v"></i> &emsp; Progress Reports (Navigate)
+                            <span class="float-end">
+                                <i class="fa fa-check-circle text-success"></i>
+                                <i class="fa fa-ellipsis-v ms-2"></i>
+                            </span>
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fa fa-ellipsis-v"></i> &emsp; Microsoft Teams for Canvas
+                            <span class="float-end">
+                                <i class="fa fa-check-circle text-success"></i>
+                                <i class="fa fa-ellipsis-v ms-2"></i>
+                            </span>
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fa fa-ellipsis-v"></i> &emsp; VHL Central
+                            <span class="float-end">
+                                <i class="fa fa-check-circle text-success"></i>
+                                <i class="fa fa-ellipsis-v ms-2"></i>
+                            </span>
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fa fa-ellipsis-v"></i> &emsp; Gradescope 1.3
+                            <span class="float-end">
+                                <i class="fa fa-check-circle text-success"></i>
+                                <i class="fa fa-ellipsis-v ms-2"></i>
+                            </span>
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fa fa-ellipsis-v"></i> &emsp; Credentials
+                            <span class="float-end">
+                                <i class="fa fa-check-circle text-success"></i>
+                                <i class="fa fa-ellipsis-v ms-2"></i>
+                            </span>
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fa fa-ellipsis-v"></i> &emsp; iClicker
+                            <span class="float-end">
+                                <i class="fa fa-check-circle text-success"></i>
+                                <i class="fa fa-ellipsis-v ms-2"></i>
+                            </span>
+                        </li>
+                    </ul>
                     <br />
-                    <table border="1" width="100%">
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <h4>Chat</h4>
-                                    Page disabled, won't appear in navigation
-                                </td>
-                                <td>
-                                    <button>⋮</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h4>SCORM</h4>
-                                    Page disabled, won't appear in navigation
-                                </td>
-                                <td>
-                                    <button>⋮</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h4>Attendance</h4>
-                                    Page disabled, won't appear in navigation
-                                </td>
-                                <td>
-                                    <button>⋮</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h4>Barnes and Noble Bookstore</h4>
-                                    Page disabled, won't appear in navigation
-                                </td>
-                                <td>
-                                    <button>⋮</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h4>Digication</h4>
-                                    Page disabled, won't appear in navigation
-                                </td>
-                                <td>
-                                    <button>⋮</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h4>Top Hat</h4>
-                                    Page disabled, won't appear in navigation
-                                </td>
-                                <td>
-                                    <button>⋮</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h4>Syllabus</h4>
-                                    Page disabled, will redirect to home page
-                                </td>
-                                <td>
-                                    <button>⋮</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h4>Perusall</h4>
-                                    Page disabled, won't appear in navigation
-                                </td>
-                                <td>
-                                    <button>⋮</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h4>Microsoft Teams Meetings</h4>
-                                    Page disabled, won't appear in navigation
-                                </td>
-                                <td>
-                                    <button>⋮</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h4>FACT Reporting and Photo Roster</h4>
-                                    Page disabled, won't appear in navigation
-                                </td>
-                                <td>
-                                    <button>⋮</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h4>Progress Reports (Navigate)</h4>
-                                    Page disabled, won't appear in navigation
-                                </td>
-                                <td>
-                                    <button>⋮</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h4>Microsoft Teams for Canvas</h4>
-                                    Page disabled, won't appear in navigation
-                                </td>
-                                <td>
-                                    <button>⋮</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h4>VHL Central</h4>
-                                    Page disabled, won't appear in navigation
-                                </td>
-                                <td>
-                                    <button>⋮</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h4>Gradescope 1.3</h4>
-                                    Page disabled, won't appear in navigation
-                                </td>
-                                <td>
-                                    <button>⋮</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h4>Credentials</h4>
-                                    Page disabled, won't appear in navigation
-                                </td>
-                                <td>
-                                    <button>⋮</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h4>iClicker</h4>
-                                    Page disabled, won't appear in navigation
-                                </td>
-                                <td>
-                                    <button>⋮</button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <br />
-                    <button>Save</button>
+                    <button class="wd-red-button">Save</button>
                 </div>
             </div>
         </div>

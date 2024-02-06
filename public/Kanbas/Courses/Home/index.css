@@ -140,9 +140,6 @@
     color:gray;
   }
 
-  .wd-page-height {
-    height: 100% !important;
-  }
 
 @media screen and (max-width: 767px) {
     .wd-breadcrumb {
