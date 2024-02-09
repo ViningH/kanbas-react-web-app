@@ -1,6 +1,11 @@
+import Labs from "./Labs";
+import HelloWorld from "./Labs/a3/HelloWorld";
 function App() {
   return (
-      <h1>Hello World!</h1>
+    <div>
+      <Labs />
+      <HelloWorld />
+    </div>
   );
 }
 export default App;
