@@ -1,0 +1,30 @@
+.wd-breadcrumb {
+    --bs-breadcrumb-divider: '>';
+    padding-inline: 10px;
+    padding-top: 10px;
+    border-bottom: 1px solid lightgrey !important;
+    margin-bottom: 10px;
+    vertical-align: bottom;
+}
+
+.wd-breadcrumb a {
+    color: red;
+    text-decoration: none;
+}
+.wd-breadcrumb li {
+    padding-top: 10px;;
+}
+
+.wd-breadcrumb-button {
+    background-color: white;
+    border: none;
+    color: red;
+    padding-left: 5px;
+    padding-right: 20px;
+    font-size: 25px;
+}
+
+.wd-tiny-course-text {
+    font-size: x-small;
+    padding-left: 15px;
+}
