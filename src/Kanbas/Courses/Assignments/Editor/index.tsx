@@ -34,7 +34,7 @@ function AssignmentEditor() {
 
           <div className="mb-3 row">
             <label htmlFor="points-input" className="col-3 col-form-label wd-align-text-right">Points </label>
-            <div className="col-7"> <input className="form-control" placeholder="100" id="points-input" /> </div>
+            <div className="col-7"> <input className="form-control" placeholder={assignment?.points} id="points-input" /> </div>
           </div>
           <div className="mb-3 row">
             <label htmlFor="assignment-group" className="col-3 col-form-label wd-align-text-right"> Assignment Group </label>
@@ -148,7 +148,7 @@ function AssignmentEditor() {
                 <label><strong>Due</strong></label>
               </div>
               <div className="col-11 wd-inside-form-card">
-                <input className="form-control" type="date" value="2020-09-01" />
+                <input className="form-control" type="date" value={assignment?.due} />
               </div>
               <div className="col-11 wd-inside-form-card">
                 <div className="row">
@@ -163,10 +163,10 @@ function AssignmentEditor() {
               <div className="col-11 wd-inside-form-bottom">
                 <div className="row">
                   <div className="col-6">
-                    <input className="form-control" type="date" id="available-from" value="2021-01-01" />
+                    <input className="form-control" type="date" id="available-from" value={assignment?.start} />
                   </div>
                   <div className="col-6">
-                    <input className="form-control" type="date" id="until" value="2021-01-01" />
+                    <input className="form-control" type="date" id="until" value={assignment?.due} />
                   </div>
                 </div>
               </div>

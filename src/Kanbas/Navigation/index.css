@@ -2,6 +2,7 @@
     background-color: black;
     padding: 0px;  margin: 0px;
     width: 80px;
+    overflow-y: visible;
   }
   .wd-kanbas-navigation li {
     padding: 5px;     margin-bottom: 5px;
@@ -14,22 +15,22 @@
     color: red;
   }
 
-  .wd-kanbas-navigation li.wd-active a div.account-icons {
+  .wd-kanbas-navigation li.wd-active a span.account-icons {
     color: grey;
   }
   .wd-kanbas-navigation a {
     color: white;
     text-decoration: none;
   }
-  .wd-kanbas-navigation a div.regular-icons {
+  .wd-kanbas-navigation a span.regular-icons {
     color: red;
     font-size: 2em !important;
     
   }
-  .wd-kanbas-navigation a div.account-icons {
+  .wd-kanbas-navigation a span.account-icons {
     color: white;
     font-size: 2em !important;
- 
+
   }
 
 

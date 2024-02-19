@@ -21,21 +21,31 @@ function Assignments() {
       <ul className="list-group wd-modules">
         <li className="list-group-item">
           <div>
-            <FaEllipsisV className="me-2" /><strong>🞃 Assignments</strong> 
+            <FaEllipsisV className="me-2" /><strong>🞃 Assignments</strong>
             <span className="float-end">
-            <button className="wd-assignment-button">40% of Total</button>
+              <button className="wd-assignment-button">40% of Total</button>
               <FaPlusCircle className="ms-2" /><FaEllipsisV className="ms-2" />
             </span>
           </div>
           <ul className="list-group">
             {assignmentList.map((assignment) => (
               <li className="list-group-item">
-                <FaEllipsisV className="me-2" />
-                <TbFilePencil className="text-success" />
-                <Link
-                  to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`} className="wd-assignment-title-link">{assignment.title}</Link>
-                <span className="float-end">
-                  <FaCheckCircle className="text-success" /><FaEllipsisV className="ms-2" /></span>
+                <div className="d-flex">
+                  <div className="wd-assignment-item-padding">
+                    <FaEllipsisV className="me-2" />
+                  </div>
+                  <div className="wd-assignment-item-padding">
+                    <TbFilePencil className="wd-green-pencil" />
+                  </div>
+                  <div className="flex-fill wd-assignment-text-padding">
+                    <h4><Link
+                      to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`} className="wd-assignment-title-link">{assignment.title}</Link></h4>
+                      <span className="wd-red-link">Multiple Modules</span> | Week starting on {assignment.start} |<br />
+                      Due {assignment.due} at 11:59 PM | {assignment.points} pts
+                  </div>
+                  <div className="wd-assignment-item-padding">
+                    <FaCheckCircle className="text-success" /><FaEllipsisV className="ms-2" /></div>
+                </div>
               </li>))}
           </ul>
         </li>

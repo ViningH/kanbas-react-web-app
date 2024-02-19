@@ -43,7 +43,7 @@ function Grades() {
         <table className="table table-striped table-bordered">
           <thead>
             <th>Student Name</th>
-            {as.map((as) => (<th>{as.title}</th>))}
+            {as.map((as) => (<th  className="wd-center-table-items">{as.title}<br /> Out of {as.points}</th>))}
           </thead>
           <tbody>
             {es.map((es) => {

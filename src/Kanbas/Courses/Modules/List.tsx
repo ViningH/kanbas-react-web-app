@@ -13,12 +13,13 @@ function ModuleList() {
         <button className="wd-standard-button">Collapse All</button>
         <button className="wd-standard-button">View Progress</button>
         <select className="wd-standard-button">
-            <option>✔ Publish All</option>
-            <option>Unpublish All</option>
+          <option>✔ Publish All</option>
+          <option>Unpublish All</option>
         </select>
         <button className="wd-red-button">+ Module</button>
         <button className="wd-standard-button">⋮</button>
-    </div>
+      </div>
+      <hr />
       <ul className="list-group wd-modules">
         {modulesList.map((module) => (
           <li

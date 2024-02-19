@@ -20,3 +20,18 @@
     padding-inline: 5px;
     border-radius: 10px;
 }
+
+.wd-assignment-item-padding {
+    padding-inline: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.wd-assignment-text-padding {
+    padding-inline: 5px;
+}
+
+.wd-green-pencil {
+    font-size: 30px;
+    color:green;
+}

@@ -15,13 +15,13 @@ function KanbasNavigation() {
     ];
     const { pathname } = useLocation();
     return (
-        <ul className="wd-kanbas-navigation">
+        <ul className="wd-kanbas-navigation wd-page-height">
             <li>
             <a className="wd-n-text" href="http://northeastern.edu">N</a>
             </li>
             {links.map((link, index) => (
                 <li key={index} className={pathname.includes(link.label) ? "wd-active" : ""}>
-                    <Link to={`/Kanbas/${link.label}`}> <div className={link.label.includes("Account") ? "account-icons" : "regular-icons"}>{link.icon}</div> <div>{link.label}</div> </Link>
+                    <Link to={`/Kanbas/${link.label}`}> <span className={link.label.includes("Account") ? "account-icons" : "regular-icons"}>{link.icon}</span> <div>{link.label}</div> </Link>
                 </li>
             ))}
         </ul>
