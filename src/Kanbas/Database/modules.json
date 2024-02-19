@@ -81,19 +81,79 @@
       "_id": "M201",
       "name": "Fundamentals of Aerodynamics",
       "description": "Basic aerodynamic concepts and fluid dynamics principles.",
-      "course": "RS102"
+      "course": "RS102",
+      "lessons": [
+        {
+          "_id": "L121",
+          "name": "Aerodynamic Principles",
+          "description": "Overview of aerodynamic principles.",
+          "module": "M201"
+        },
+        {
+          "_id": "L122",
+          "name": "Aerodynamic Calculations",
+          "description": "Understanding the basic equations for aerodynamics.",
+          "module": "M201"
+        },
+        {
+          "_id": "L123",
+          "name": "Importance of Aerodynamics",
+          "description": "Understanding the importance of aerodynamics for society.",
+          "module": "M201"
+        }
+      ]
     },
     {
       "_id": "M202",
       "name": "Subsonic and Supersonic Flow",
       "description": "Understanding subsonic and supersonic aerodynamic behaviors.",
-      "course": "RS102"
+      "course": "RS102",
+      "lessons": [
+        {
+          "_id": "L221",
+          "name": "Subsonic Flow",
+          "description": "Overview of subsonic flow.",
+          "module": "M202"
+        },
+        {
+          "_id": "L222",
+          "name": "Supersonic Flow",
+          "description": "Overview of supersonic flow.",
+          "module": "M202"
+        },
+        {
+          "_id": "L223",
+          "name": "Flow Calculations",
+          "description": "Calculating both subsonic and supersonic flow.",
+          "module": "M202"
+        }
+      ]
     },
     {
       "_id": "M203",
       "name": "Aerodynamic Heating",
       "description": "Study of aerodynamic heating and thermal protection systems.",
-      "course": "RS102"
+      "course": "RS102",
+      "lessons": [
+        {
+          "_id": "L321",
+          "name": "Aerodynamic Heating",
+          "description": "Overview of aerodynamic heating.",
+          "module": "M203"
+        },
+        {
+          "_id": "L322",
+          "name": "Thermal Protection Systems",
+          "description": "Overview of thermal protection systems.",
+          "module": "M203"
+        },
+        {
+          "_id": "L323",
+          "name": "Damage Risk from Heating",
+          "description": "The risk of damage from aerodynamic heating.",
+          "module": "M203"
+        }
+      ]
     },
     {
       "_id": "M301",

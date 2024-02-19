@@ -6,10 +6,10 @@ import "./index.css";
 function Kanbas() {
    return (
          <div className="d-flex">
-            <div className="d-none d-md-block">
+            <div className="d-none d-md-block wd-kanbas-navi-height">
                <KanbasNavigation />
             </div>
-            <div style={{ flexGrow: 1 }}>
+            <div className="wd-shift-content" style={{ flexGrow: 1 }}>
                <Routes>
                   <Route path="/" element={<Navigate to="Dashboard" />} />
                   <Route path="Account" element={<h1>Account</h1>} />
