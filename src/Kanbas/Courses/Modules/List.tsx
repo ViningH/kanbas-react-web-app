@@ -15,7 +15,6 @@ function ModuleList() {
         <select className="wd-standard-button">
             <option>✔ Publish All</option>
             <option>Unpublish All</option>
-            <option>Publish Select Module</option>
         </select>
         <button className="wd-red-button">+ Module</button>
         <button className="wd-standard-button">⋮</button>

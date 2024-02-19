@@ -88,5 +88,75 @@
       "email": "legolas@mirkwood.com",
       "dob": "2879-07-15",
       "role": "FACULTY"
+    },
+    {
+      "_id": "130",
+      "username": "lost_in_wonderland",
+      "password": "followrabbit4",
+      "firstName": "Alice",
+      "lastName": "Wonderland",
+      "email": "alice@wonderland.net",
+      "dob": "2000-01-01",
+      "role": "STUDENT"
+    },
+    {
+      "_id": "131",
+      "username": "justjohndoe",
+      "password": "looking_forjane20",
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "johndoe@gmail.com",
+      "dob": "1999-12-31",
+      "role": "STUDENT"
+    },
+    {
+      "_id": "132",
+      "username": "leia_skywalker",
+      "password": "232dfad_ajkads",
+      "firstName": "Princess",
+      "lastName": "Leia",
+      "email": "princess.leia@walker.net",
+      "dob": "2222-06-20",
+      "role": "STUDENT"
+    },
+    {
+      "_id": "133",
+      "username": "lukeskywalker",
+      "password": "DSFds_da231klf",
+      "firstName": "Luke",
+      "lastName": "Skywalker",
+      "email": "lukesky@walker.net",
+      "dob": "2222-06-20",
+      "role": "STUDENT"
+    },
+    {
+      "_id": "134",
+      "username": "hansolo",
+      "password": "starship34",
+      "firstName": "Han",
+      "lastName": "Solo",
+      "email": "hansolo@star.net",
+      "dob": "2210-07-06",
+      "role": "STUDENT"
+    },
+    {
+      "_id": "135",
+      "username": "lando",
+      "password": "Calresian3",
+      "firstName": "Lando",
+      "lastName": "Calresian",
+      "email": "lando.calresian@star.net",
+      "dob": "2210-03-29",
+      "role": "STUDENT"
+    },
+    {
+      "_id": "136",
+      "username": "bobafet",
+      "password": "bountyhunter",
+      "firstName": "Boba",
+      "lastName": "Fet",
+      "email": "fet@mandalorian.com",
+      "dob": "2201-04-18",
+      "role": "STUDENT"
     }
   ]
