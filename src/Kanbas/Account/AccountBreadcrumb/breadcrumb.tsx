@@ -1,13 +1,10 @@
 import KanbasNavigation from "../../Navigation";
-import CourseNavigation from "../Navigation";
-import { courses } from "../../Database";
+import AccountNavigation from "../Navigation";
 import { Navigate, Route, Routes, useParams, Link, useLocation } from "react-router-dom";
 import { FaChevronDown } from "react-icons/fa";
 import { HiMiniBars3 } from "react-icons/hi2";
 import { link } from "fs";
-function CourseBreadcrumb() {
-    const { courseId } = useParams();
-    const course = courses.find((course) => course._id === courseId);
+function AccountBreadcrumb() {
     const location = useLocation();
     const pathArray = location.pathname.split('/');
     pathArray.shift();
@@ -36,7 +33,7 @@ function CourseBreadcrumb() {
                     <span className="float-end">
                         <div className="d-md-none">
                             <button className="wd-breadcrumb-button" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseCourseNavi"
+                                data-bs-target="#collapseAccountNavi"
                             ><FaChevronDown /></button>
                         </div>
                     </span>
@@ -45,7 +42,7 @@ function CourseBreadcrumb() {
                             data-bs-target="#collapseKanbasNavi" aria-expanded="false"
                             aria-controls="collapseKanbasNavi"><HiMiniBars3 /></button>
                         {breadCrumbLinks.map(({_name, _links}) => (<li className={"breadcrumb-item " + (_name == currentPage ? "active" : "")} >
-                            {_name == currentPage ? _name : <Link to={_links}>{_name == courseId ? course?.number + " " + course?.name : _name}</Link>}
+                            {_name == currentPage ? _name : <Link to={_links}>{_name}</Link>}
                             </li>))}    
                     </ol>
 
@@ -54,10 +51,10 @@ function CourseBreadcrumb() {
             <div className="collapse" id="collapseKanbasNavi">
                 <KanbasNavigation />
             </div>
-            <div className="collapse" id="collapseCourseNavi">
-                <CourseNavigation />
+            <div className="collapse" id="collapseAccountNavi">
+                <AccountNavigation />
             </div>
         </>
     )
 }
-export default CourseBreadcrumb;
+export default AccountBreadcrumb;

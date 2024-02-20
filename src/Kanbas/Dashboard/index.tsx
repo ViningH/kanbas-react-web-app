@@ -19,8 +19,8 @@ function Dashboard() {
                 <div className="card-body">
                   <Link className="card-title" to={`/Kanbas/Courses/${course._id}/Home`}
                     style={{ textDecoration: "none", color: "dodgerblue", fontWeight: "bold" }}>
-                    {course._id} {course.name} </Link>
-                  <p className="card-text">{course._id} {course.name}</p>
+                    {course.number} {course.name} </Link>
+                  <p className="card-text">{course.number}.{course._id} {course.name}</p>
                   <Link to={`/Kanbas/Courses/${course._id}/Home`} className="btn wd-dashboard-button">
                     <TbFilePencil style={{fontSize: 25}}/></Link>
                 </div>

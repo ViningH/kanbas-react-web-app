@@ -10,6 +10,8 @@ import AssignmentEditor from "./Assignments/Editor";
 import Grades from "./Grades";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import CourseBreadcrumb from "./CourseBreadcrumb/breadcrumb";
+import CourseDetails from "./Settings/CourseDetails";
+import CourseSettingsNavigation from "./Settings/Navigation";
 function Courses() {
     const { courseId } = useParams();
     const course = courses.find((course) => course._id === courseId);
@@ -18,7 +20,7 @@ function Courses() {
             <CourseBreadcrumb />
             <div className="d-flex">
                 <div className="d-none d-md-block">
-                    <div className="wd-tiny-course-text">{course?.name}</div>
+                    <div className="wd-tiny-course-text">{course?._id} {course?.semester}</div>
                     <CourseNavigation />
                 </div>
                 <div className="wd-internal-content" >
@@ -30,6 +32,9 @@ function Courses() {
                         <Route path="Assignments" element={<Assignments />} />
                         <Route path="Assignments/:assignmentId" element={<AssignmentEditor />} />
                         <Route path="Grades" element={<Grades />} />
+                        <Route path="Settings" element={<CourseDetails />} />
+                        <Route path="Settings/CourseDetails" element={<CourseDetails />} />
+                        <Route path="Settings/Navigation" element={<CourseSettingsNavigation />} />
                     </Routes>
                 </div>
             </div>

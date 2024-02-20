@@ -27,7 +27,8 @@ function AssignmentEditor() {
           <input className="form-control" id="assignment-name-input" value={assignment?.title} />
         </div>
         <div className="mb-3">
-          <textarea className="form-control" id="assignment-text">This assignment describes how to install the development environment for creating and working with Web applications we will be developing this semester. We will add new content every week, pushing the code to a GitHub source repository, and then deploying the content to a remote server hosted on Netlify.
+          <textarea className="form-control" id="assignment-text">
+            {assignment?.description}
           </textarea>
         </div>
         <div style={{ textAlign: "center" }}>
