@@ -5,6 +5,7 @@ import AccountBreadcrumb from "./AccountBreadcrumb/breadcrumb";
 import AccountNavigation from "./Navigation";
 import Profile from './Profile';
 import "./index.css";
+import ProfileEdit from './Profile/Edit';
 function Account() {
     return (
         <div className="wd-main-content">
@@ -15,7 +16,9 @@ function Account() {
                 </div>
                 <div className="wd-internal-content" >
                     <Routes>
-                        <Route path="/Profile" element={<h2>Profile</h2>} />
+                        <Route path="/" element={<Navigate to="Profile" />} />
+                        <Route path="/Profile" element={<Profile />} />
+                        <Route path="/Profile/Edit" element={<ProfileEdit />} />
                         <Route path="Notifications" element={<h1>Notifications</h1>} />
                         <Route path="Files" element={<h1>Files</h1>} />
                         <Route path="Settings" element={<h1>Settings</h1>} />

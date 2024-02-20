@@ -96,6 +96,6 @@ function CourseBreadcrumb() {
                 </ul>
             </div>
         </>
-    )
+    );
 }
 export default CourseBreadcrumb;

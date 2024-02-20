@@ -55,6 +55,6 @@ function AccountBreadcrumb() {
                 <AccountNavigation />
             </div>
         </>
-    )
+    );
 }
 export default AccountBreadcrumb;
