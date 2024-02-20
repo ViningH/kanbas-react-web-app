@@ -31,7 +31,9 @@ function Courses() {
                         <Route path="Piazza" element={<h1>Piazza</h1>} />
                         <Route path="Assignments" element={<Assignments />} />
                         <Route path="Assignments/:assignmentId" element={<AssignmentEditor />} />
+                        <Route path="Quizzes" element={<h1>Quizzes</h1>} />
                         <Route path="Grades" element={<Grades />} />
+                        <Route path="People" element={<h1>People</h1>} />
                         <Route path="Settings" element={<CourseDetails />} />
                         <Route path="Settings/CourseDetails" element={<CourseDetails />} />
                         <Route path="Settings/Navigation" element={<CourseSettingsNavigation />} />
