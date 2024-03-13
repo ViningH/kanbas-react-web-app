@@ -12,7 +12,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import CourseBreadcrumb from "./CourseBreadcrumb/breadcrumb";
 import CourseDetails from "./Settings/CourseDetails";
 import CourseSettingsNavigation from "./Settings/Navigation";
-function Courses() {
+function Courses({ courses }: { courses: any[]; }) {
     const { courseId } = useParams();
     const course = courses.find((course) => course._id === courseId);
     return (
