@@ -1,16 +1,27 @@
 import React from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
-import { assignments } from "../../../Database";
+import { useSelector, useDispatch } from "react-redux";
 import "./index.css";
+import {
+  addAssignment,
+  updateAssignment,
+  setAssignment,
+} from "../reducer";
+import { KanbasState } from "../../../store";
 import { FaCircleCheck } from "react-icons/fa6";
 function AssignmentEditor() {
-  const { assignmentId } = useParams();
-  const assignment = assignments.find(
-    (assignment) => assignment._id === assignmentId);
+  const assignment = useSelector((state: KanbasState) => state.assignmentsReducer.assignment);
+  const assignmentList = useSelector((state: KanbasState) => state.assignmentsReducer.assignments);
+  const dispatch = useDispatch();
   const { courseId } = useParams();
   const navigate = useNavigate();
   const handleSave = () => {
     console.log("Actually saving assignment TBD in later assignments");
+    if (assignmentList.filter(a => a._id === assignment._id).length > 0) {
+      dispatch(updateAssignment(assignment));
+    } else {
+      dispatch(addAssignment({...assignment, course: courseId}));
+    };
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };
   return (
@@ -24,10 +35,14 @@ function AssignmentEditor() {
         <div className="mb-3">
           <label htmlFor="assignment-name-input" className="form-label">
             Assignment Name</label>
-          <input className="form-control" id="assignment-name-input" value={assignment?.title} />
+          <input className="form-control" id="assignment-name-input" 
+          value={assignment?.title} onChange={(e) => 
+          dispatch(setAssignment({...assignment, title: e.target.value}))}/>
         </div>
         <div className="mb-3">
-          <textarea className="form-control" id="assignment-text">
+          <textarea className="form-control" id="assignment-text"
+          onChange={(e) => 
+            dispatch(setAssignment({...assignment, description: e.target.value}))}>
             {assignment?.description}
           </textarea>
         </div>
@@ -35,7 +50,9 @@ function AssignmentEditor() {
 
           <div className="mb-3 row">
             <label htmlFor="points-input" className="col-3 col-form-label wd-align-text-right">Points </label>
-            <div className="col-7"> <input className="form-control" placeholder={assignment?.points} id="points-input" /> </div>
+            <div className="col-7"> <input className="form-control" placeholder={assignment?.points} id="points-input" 
+            onChange={(e) => 
+              dispatch(setAssignment({...assignment, points: e.target.value}))}/> </div>
           </div>
           <div className="mb-3 row">
             <label htmlFor="assignment-group" className="col-3 col-form-label wd-align-text-right"> Assignment Group </label>
@@ -149,7 +166,9 @@ function AssignmentEditor() {
                 <label><strong>Due</strong></label>
               </div>
               <div className="col-11 wd-inside-form-card">
-                <input className="form-control" type="date" value={assignment?.due} />
+                <input className="form-control" type="date" value={assignment?.due} 
+                onChange={(e) => 
+                  dispatch(setAssignment({...assignment, due: e.target.value}))}/>
               </div>
               <div className="col-11 wd-inside-form-card">
                 <div className="row">
@@ -164,10 +183,14 @@ function AssignmentEditor() {
               <div className="col-11 wd-inside-form-bottom">
                 <div className="row">
                   <div className="col-6">
-                    <input className="form-control" type="date" id="available-from" value={assignment?.start} />
+                    <input className="form-control" type="date" id="available-from" value={assignment?.start} 
+                    onChange={(e) => 
+            dispatch(setAssignment({...assignment, start: e.target.value}))}/>
                   </div>
                   <div className="col-6">
-                    <input className="form-control" type="date" id="until" value={assignment?.due} />
+                    <input className="form-control" type="date" id="until" value={assignment?.end} 
+                    onChange={(e) => 
+                      dispatch(setAssignment({...assignment, end: e.target.value}))}/>
                   </div>
                 </div>
               </div>
