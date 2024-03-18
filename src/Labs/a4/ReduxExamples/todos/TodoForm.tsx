@@ -8,12 +8,23 @@ function TodoForm() {
     const dispatch = useDispatch();
     return (
         <li className="list-group-item">
-            <button onClick={() => dispatch(addTodo(todo))}> Add </button>
-            <button onClick={() => dispatch(updateTodo(todo))}> Update </button>
-            <input
-                value={todo.title}
-                onChange={(e) => dispatch(setTodo({ ...todo, title: e.target.value }))}
-            />
+            <form className="row g-3">
+                <div className="col-auto">
+                    <input
+                        className="form-control"
+                        value={todo.title}
+                        onChange={(e) => dispatch(setTodo({ ...todo, title: e.target.value }))}
+                    />
+                </div>
+                <div className="col-auto">
+                    <button className="btn lab-yellow-button"
+                        onClick={() => dispatch(updateTodo(todo))}> Update </button>
+                </div>
+                <div className="col-auto">
+                    <button className="btn lab-green-button"
+                        onClick={() => dispatch(addTodo(todo))}> Add </button>
+                </div>
+            </form>
         </li>
     );
 }

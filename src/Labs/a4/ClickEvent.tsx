@@ -1,3 +1,4 @@
+import "./index.css";
 function ClickEvent() {
     const hello = () => {
       alert("Hello World!");
@@ -8,11 +9,11 @@ function ClickEvent() {
     return (
       <div>
         <h2>Click Event</h2>
-        <button onClick={hello}>
+        <button onClick={hello} className="btn btn-primary wd-button-space">
           Click Hello</button>
-        <button onClick={() => lifeIs("Good!")}>
+        <button onClick={() => lifeIs("Good!")} className="btn btn-primary wd-button-space">
           Click Good</button>
-        <button
+        <button className="btn btn-primary wd-button-space"
           onClick={() => {
             hello();
             lifeIs("Great!");

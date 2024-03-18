@@ -6,7 +6,9 @@ import { HiMiniBars3 } from "react-icons/hi2";
 import { link } from "fs";
 import "./index.css";
 import { FaGear, FaPencil } from "react-icons/fa6";
-function CourseBreadcrumb() {
+function CourseBreadcrumb({course}: {
+    course: any 
+}) {
     const links = [
         { label: "Account", icon: <FaRegUserCircle className="fs-2" /> },
         { label: "Dashboard", icon: <FaTachometerAlt className="fs-2" /> },
@@ -29,7 +31,7 @@ function CourseBreadcrumb() {
         { label: "Settings", icon: <FaGear className="fs-2" /> }];
     const { courseId } = useParams();
     const { pathname } = useLocation();
-    const course = courses.find((course) => course._id === courseId);
+    
     const location = useLocation();
     const pathArray = location.pathname.split('/');
     pathArray.shift();

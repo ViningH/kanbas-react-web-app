@@ -32,21 +32,27 @@ function ModuleList() {
         <button className="wd-standard-button">⋮</button>
       </div>
       <hr />
-      <ul className="list-group wd-modules">
-        <li className="list-group-item">
-          <input value={module.name}
-            onChange={(e) => dispatch(setModule({ ...module, name: e.target.value }))
-            }
-          /><br />
-          <textarea value={module.description}
-            onChange={(e) => dispatch(setModule({ ...module, description: e.target.value }))
-            }
-          />
-          <button onClick={() => dispatch(addModule({ ...module, course: courseId }))}>Add</button>
-          <button onClick={() => dispatch(updateModule(module))}>
+      <div className="wd-add-module">
+        <h6>New Module Information</h6>
+        <input value={module.name}
+          className="form-control wd-add-spacing"
+          onChange={(e) => dispatch(setModule({ ...module, name: e.target.value }))
+          }
+        />
+        <textarea value={module.description}
+          className="form-control"
+          onChange={(e) => dispatch(setModule({ ...module, description: e.target.value }))
+          }
+        />
+        <div className="wd-align-right">
+          <button className="wd-add-button"
+            onClick={() => dispatch(addModule({ ...module, course: courseId }))}>Add</button>
+          <button className="wd-edit-button" onClick={() => dispatch(updateModule(module))}>
             Update
           </button>
-        </li>
+        </div>
+      </div>
+      <ul className="list-group wd-modules">
         {modulesList.filter((module) => module.course === courseId)
           .map((module, index) => (
             <li key={index}
@@ -56,11 +62,11 @@ function ModuleList() {
                 <FaEllipsisV className="me-2" />
                 {module.name}
                 <span className="float-end">
-                  <button
+                  <button className="wd-red-delete-button"
                     onClick={() => dispatch(deleteModule(module._id))}>
                     Delete
                   </button>
-                  <button
+                  <button className="wd-edit-button"
                     onClick={() => dispatch(setModule(module))}>
                     Edit
                   </button>

@@ -13,23 +13,27 @@ function Dashboard({ courses, course, setCourse, addNewCourse,
   return (
     <div className="p-4">
       <h1>Dashboard</h1>
-      <h5>Course</h5>
-      <input value={course.name} className="form-control"
-        onChange={(e) => setCourse({ ...course, name: e.target.value })} />
-      <input value={course.number} className="form-control"
-        onChange={(e) => setCourse({ ...course, number: e.target.value })} />
-      <input value={course.startDate} className="form-control" type="date"
-        onChange={(e) => setCourse({ ...course, startDate: e.target.value })} />
-      <input value={course.endDate} className="form-control" type="date"
-        onChange={(e) => setCourse({ ...course, endDate: e.target.value })} />
-      <button onClick={addNewCourse} >
-        Add
-      </button>
-      <button onClick={updateCourse} >
-        Update
-      </button>
+      <div className="wd-course-add-box">
+        <h5>Course</h5>
+        <input value={course.name} className="form-control wd-add-item-padding"
+          onChange={(e) => setCourse({ ...course, name: e.target.value })} />
+        <input value={course.number} className="form-control wd-add-item-padding"
+          onChange={(e) => setCourse({ ...course, number: e.target.value })} />
+        <input value={course.startDate} className="form-control wd-add-item-padding" type="date"
+          onChange={(e) => setCourse({ ...course, startDate: e.target.value })} />
+        <input value={course.endDate} className="form-control wd-add-item-padding" type="date"
+          onChange={(e) => setCourse({ ...course, endDate: e.target.value })} />
+        <div className="wd-btn-move-right">
+          <button className="btn wd-green-dashboard-btn wd-dashboard-btn-padding wd-add-item-padding" onClick={addNewCourse} >
+            Add
+          </button>
+          <button className="btn btn-primary wd-dashboard-btn-padding wd-add-item-padding" onClick={updateCourse} >
+            Update
+          </button>
+        </div>
+      </div>
       <hr />
-      <h2>Published Courses (3)</h2> <hr />
+      <h2>Published Courses ({courses.length})</h2> <hr />
       <div className="row">
         <div className="row row-cols-1 row-cols-md-5 g-4">
           {courses.map((course) => (
@@ -42,21 +46,28 @@ function Dashboard({ courses, course, setCourse, addNewCourse,
                     style={{ textDecoration: "none", color: "dodgerblue", fontWeight: "bold" }}>
                     {course.number} {course.name} </Link>
                   <p className="card-text">{course.number}.{course._id} {course.name}</p>
-                  <Link to={`/Kanbas/Courses/${course._id}/Home`} className="btn wd-dashboard-button">
-                    <TbFilePencil style={{ fontSize: 25 }} /></Link>
-                  <button onClick={(event) => {
-                    event.preventDefault();
-                    setCourse(course);
-                  }}>
-                    Edit
-                  </button>
+                  <div>
+                    <Link to={`/Kanbas/Courses/${course._id}/Home`} className="btn wd-dashboard-button">
+                      <TbFilePencil style={{ fontSize: 25 }} /></Link>
+                    <span className="wd-btn-move-right">
 
-                  <button onClick={(event) => {
-                    event.preventDefault();
-                    deleteCourse(course._id);
-                  }}>
-                    Delete
-                  </button>
+                      <button className="btn btn-primary wd-dashboard-btn-padding"
+                        onClick={(event) => {
+                          event.preventDefault();
+                          setCourse(course);
+                        }}>
+                        Edit
+                      </button>
+
+                      <button className="btn wd-red-dashboard-btn wd-dashboard-btn-padding"
+                        onClick={(event) => {
+                          event.preventDefault();
+                          deleteCourse(course._id);
+                        }}>
+                        Delete
+                      </button>
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>

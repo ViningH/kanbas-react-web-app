@@ -17,7 +17,7 @@ function Courses({ courses }: { courses: any[]; }) {
     const course = courses.find((course) => course._id === courseId);
     return (
         <div className="wd-main-content">
-            <CourseBreadcrumb />
+            <CourseBreadcrumb course={course} />
             <div className="d-flex">
                 <div className="d-none d-md-block">
                     <div className="wd-tiny-course-text">{course?._id} {course?.semester}</div>
