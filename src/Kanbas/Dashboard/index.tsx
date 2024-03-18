@@ -19,8 +19,10 @@ function Dashboard({ courses, course, setCourse, addNewCourse,
           onChange={(e) => setCourse({ ...course, name: e.target.value })} />
         <input value={course.number} className="form-control wd-add-item-padding"
           onChange={(e) => setCourse({ ...course, number: e.target.value })} />
+          Start Date:
         <input value={course.startDate} className="form-control wd-add-item-padding" type="date"
           onChange={(e) => setCourse({ ...course, startDate: e.target.value })} />
+          End Date:
         <input value={course.endDate} className="form-control wd-add-item-padding" type="date"
           onChange={(e) => setCourse({ ...course, endDate: e.target.value })} />
         <div className="wd-btn-move-right">

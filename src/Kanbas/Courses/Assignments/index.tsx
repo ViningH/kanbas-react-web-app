@@ -24,7 +24,12 @@ function Assignments() {
         <span>
           <button className="wd-standard-button">+ Group</button>
           <Link to={`/Kanbas/Courses/${courseId}/Assignments/NewAssignment`}>
-            <button className="wd-red-button" onClick={() => dispatch(setAssignment({...assignment, _id: new Date().getTime().toString()}))}>+ Assignment
+            <button className="wd-red-button" onClick={() => dispatch(setAssignment({...assignment, 
+              _id: new Date().getTime().toString(), 
+              title: "New Assignment", description: "New Assignment Description",
+              points: 100, start: "2024-01-01",
+              due: "2024-12-31",
+              end: "2025-01-01"  }))}>+ Assignment
             </button></Link>
           <button className="wd-standard-button">⋮</button></span>
       </p>
