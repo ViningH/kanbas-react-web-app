@@ -1,0 +1,31 @@
+.wd-button-space {
+    margin: 5px;
+}
+
+.lab-green-button {
+    background-color: green;
+    color: white;
+}
+
+.lab-red-button {
+    background-color: red;
+    color: white;
+}
+
+.lab-yellow-button {
+    background-color:goldenrod;
+}
+
+.lab-input {
+    width: 20%;
+}
+
+.lab-input-space {
+    margin: 2px;
+}
+
+.lab-input-corners {
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+}
+
