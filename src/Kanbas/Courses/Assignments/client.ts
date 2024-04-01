@@ -1,6 +1,6 @@
 import axios from "axios";
-const COURSES_API = "http://localhost:4000/api/courses";
-const ASSIGNMENTS_API = "http://localhost:4000/api/assignments";
+const COURSES_API = "https://kanbas-node-server-app-hv-05fc8772bf2c.herokuapp.com/api/courses";
+const ASSIGNMENTS_API = "https://kanbas-node-server-app-hv-05fc8772bf2c.herokuapp.com/api/assignments";
 export const updateAssignment = async (assignment: { _id: any; }) => {
     const response = await axios
       .put(`${ASSIGNMENTS_API }/${assignment._id}`, assignment);

@@ -28,14 +28,11 @@ function AssignmentEditor() {
     if (assignmentList.filter(a => a._id === assignment._id).length > 0) {
       console.log("Does this happen")
       console.log(assignment._id +"We are consoling assignment");
-      client.updateAssignment(assignment).then(() => {dispatch(updateAssignment(assignment))})
-      /* const status = client.updateAssignment(assignment);
-      dispatch(updateAssignment(assignment)); */
+      client.updateAssignment(assignment).then(() => {dispatch(updateAssignment(assignment))});
     } else {
       console.log("Or does this")
       client.createAssignment(courseId, assignment).then((assignment) => { dispatch(addAssignment(assignment)) });
     };
-    console.log(assignmentList)
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };
   return (
