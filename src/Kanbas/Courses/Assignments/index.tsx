@@ -1,14 +1,12 @@
-import React, { useEffect } from "react";
+import React, {useEffect} from "react";
 import { FaCheckCircle, FaEllipsisV, FaPlusCircle } from "react-icons/fa";
 import { TbFilePencil } from "react-icons/tb";
 import { Link, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import "./index.css";
 import { KanbasState } from "../../store";
-import {
-  setAssignment,
-  deleteAssignment, setAssignments
-} from "./reducer";
+import { setAssignment,
+deleteAssignment, setAssignments } from "./reducer";
 import * as client from "./client";
 function Assignments() {
   const { courseId } = useParams();
@@ -19,14 +17,13 @@ function Assignments() {
     client.findAssignmentsForCourse(courseId)
       .then((assignments) =>
         dispatch(setAssignments(assignments))
-      );
+    );
   }, [courseId]);
   const handleDelete = (assignmentID: any) => {
     if (window.confirm("Do you want to delete this assignment?")) {
       client.deleteAssignment(assignmentID).then((status) => {
-        dispatch(deleteAssignment(assignmentID));
-      });
-    };
+      dispatch(deleteAssignment(assignmentID));});
+    };    
   };
   return (
     <>
@@ -35,14 +32,12 @@ function Assignments() {
         <span>
           <button className="wd-standard-button">+ Group</button>
           <Link to={`/Kanbas/Courses/${courseId}/Assignments/NewAssignment`}>
-            <button className="wd-red-button" onClick={() => dispatch(setAssignment({
-              ...assignment,
-              _id: new Date().getTime().toString(),
+            <button className="wd-red-button" onClick={() => dispatch(setAssignment({...assignment, 
+              _id: new Date().getTime().toString(), 
               title: "New Assignment", description: "New Assignment Description",
               points: 100, start: "2024-01-01",
               due: "2024-12-31",
-              end: "2025-01-01"
-            }))}>+ Assignment
+              end: "2025-01-01"  }))}>+ Assignment
             </button></Link>
           <button className="wd-standard-button">⋮</button></span>
       </p>

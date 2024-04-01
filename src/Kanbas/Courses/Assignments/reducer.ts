@@ -32,7 +32,11 @@ const assignmentsSlice = createSlice({
         },
         updateAssignment: (state, action) => {
             state.assignments = state.assignments.map((assignment: { _id: any; }) => {
+                console.log("!!"+assignment._id)
+                console.log("!!"+action.payload._id)
+                console.log("!!"+action.payload.title)
                 if (assignment._id === action.payload._id) {
+                    console.log(action.payload)
                     return action.payload;
                 } else {
                     return assignment;
