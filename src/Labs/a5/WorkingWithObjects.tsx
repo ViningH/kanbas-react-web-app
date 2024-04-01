@@ -71,19 +71,19 @@ function WorkingWithObjects() {
         })}
         checked={assignment.completed} />
       <h4>Retrieving Objects</h4>
-      <a className="btn btn-primary wd-button-space" href="http://localhost:4000/a5/assignment">
+      <a className="btn btn-primary wd-button-space" href={"" + API_BASE + "/a5/assignment"}>
         Get Assignment
       </a>
       <h4>Retrieving Properties</h4>
-      <a className="btn btn-primary wd-button-space" href="http://localhost:4000/a5/assignment/title">
+      <a className="btn btn-primary wd-button-space" href={"" + API_BASE + "/a5/assignment/title"}>
         Get Title
       </a>
       <h4>Retrieving Module Object</h4>
-      <a className="btn btn-primary wd-button-space" href="http://localhost:4000/a5/module">
+      <a className="btn btn-primary wd-button-space" href={"" + API_BASE + "/a5/module"}>
         Get Module
       </a>
       <h4>Retrieving Module Name</h4>
-      <a className="btn btn-primary wd-button-space" href="http://localhost:4000/a5/module/name">
+      <a className="btn btn-primary wd-button-space" href={"" + API_BASE + "/a5/module/name"}>
         Get Module Name
       </a>
       <h4>Modifying Module Properties</h4>
