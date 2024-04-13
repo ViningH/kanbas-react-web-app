@@ -26,7 +26,7 @@ function ModuleList() {
       );
   }, [courseId]);
   const handleAddModule = () => {
-    client.createModule(courseId, module).then((module) => {
+    client.createModule(courseId, {...module, id: Date.now()}).then((module) => {
       dispatch(addModule(module));
     });
   };
@@ -35,9 +35,9 @@ function ModuleList() {
       dispatch(deleteModule(moduleId));
     });
   };
-  const handleUpdateModule = async () => {
-    const status = await client.updateModule(module);
-    dispatch(updateModule(module));
+  const handleUpdateModule = async (newmodule: { id: any; }) => {
+    const status = await client.updateModule(newmodule);
+    dispatch(updateModule(newmodule));
   };
   const [selectedModule, setSelectedModule] = useState(modulesList[0]);
   return (
@@ -68,7 +68,7 @@ function ModuleList() {
         <div className="wd-align-right">
           <button className="wd-add-button"
             onClick={handleAddModule}>Add</button>
-          <button className="wd-edit-button" onClick={handleUpdateModule}>
+          <button className="wd-edit-button" onClick={() => handleUpdateModule(module)}>
             Update
           </button>
         </div>
@@ -84,7 +84,7 @@ function ModuleList() {
                 {module.name}
                 <span className="float-end">
                   <button className="wd-red-delete-button"
-                    onClick={() => handleDeleteModule(module._id)}>
+                    onClick={() => handleDeleteModule(module.id)}>
                     Delete
                   </button>
                   <button className="wd-edit-button"
@@ -96,7 +96,7 @@ function ModuleList() {
                   <FaEllipsisV className="ms-2" />
                 </span>
               </div>
-              {selectedModule && selectedModule?._id === module._id && (
+              {selectedModule && selectedModule?.id === module.id && (
                 <ul className="list-group">
                   {module.lessons?.map((lesson: any) => (
 
