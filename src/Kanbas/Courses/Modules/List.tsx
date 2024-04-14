@@ -34,16 +34,11 @@ function ModuleList() {
     });
   };
   const handleDeleteModule = (moduleId: string) => {
-    console.log(moduleId);
-    console.log(module.id);
-    console.log(module._id);
     client.deleteModule(moduleId).then((status) => {
       dispatch(deleteModule(moduleId));
     });
   };
   const handleUpdateModule = async () => {
-    console.log(module.id);
-    console.log(module._id);
     const status = await client.updateModule(module);
     dispatch(updateModule(module));
   };
