@@ -1,6 +1,7 @@
 import * as client from "./client";
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import "./index.css";
 export default function Profile() {
     const [profile, setProfile] = useState({
         username: "", password: "",
@@ -24,31 +25,35 @@ export default function Profile() {
     return (
         <div>
             <h1>Profile</h1>
-            <button onClick={save}>
-                Save
-            </button>
-            <button onClick={signout}>
-                Signout
-            </button>
-            <Link to="/Kanbas/Account/Admin/Users"
-                className="btn btn-warning w-100">
-                Users
-            </Link>
+
             {profile && (
                 <div>
-                    <input value={profile.username} onChange={(e) =>
+                    <label htmlFor="username" className="label-space">Username:</label>
+                    <input id="username" className="input-space input-width input-corners" value={profile.username} onChange={(e) =>
                         setProfile({ ...profile, username: e.target.value })} />
-                    <input value={profile.password} onChange={(e) =>
+                    <br />
+                    <label htmlFor="password" className="label-space">Password:</label>
+                    <input id="password" className="input-space input-width input-corners" value={profile.password} onChange={(e) =>
                         setProfile({ ...profile, password: e.target.value })} />
-                    <input value={profile.firstName} onChange={(e) =>
+                    <br />
+                    <label htmlFor="first-name" className="label-space">First Name:</label>
+                    <input id="first-name" className="input-space input-width input-corners" value={profile.firstName} onChange={(e) =>
                         setProfile({ ...profile, firstName: e.target.value })} />
-                    <input value={profile.lastName} onChange={(e) =>
+                    <br />
+                    <label htmlFor="last-name" className="label-space">Last Name:</label>
+                    <input id="last-name" className="input-space input-width input-corners" value={profile.lastName} onChange={(e) =>
                         setProfile({ ...profile, lastName: e.target.value })} />
-                    <input value={profile.dob} type="date" onChange={(e) =>
+                    <br />
+                    <label htmlFor="dob" className="label-space">Date of Birth:</label>
+                    <input id="dob" className="input-space input-width input-corners" value={profile.dob} type="date" onChange={(e) =>
                         setProfile({ ...profile, dob: e.target.value })} />
-                    <input value={profile.email} onChange={(e) =>
+                    <br />
+                    <label htmlFor="email" className="label-space">Email:</label>
+                    <input id="email" className="input-space input-width input-corners" value={profile.email} onChange={(e) =>
                         setProfile({ ...profile, email: e.target.value })} />
-                    <select onChange={(e) =>
+                    <br />
+                    <label htmlFor="user-role" className="label-space">User Role:</label>
+                    <select id="user-role" className="input-space input-width input-corners" onChange={(e) =>
                         setProfile({ ...profile, role: e.target.value })}>
                         <option value="USER">User</option>
                         <option value="ADMIN">Admin</option>
@@ -57,6 +62,19 @@ export default function Profile() {
                     </select>
                 </div>
             )}
+            <div className="wd-align-right">
+                <button className="btn input-green-button wd-button-space" onClick={save}>
+                    Save
+                </button>
+                <button className="btn input-red-button wd-button-space" onClick={signout}>
+                    Signout
+                </button>
+            </div>
+            <br />
+            <Link to="/Kanbas/Account/Admin/Users"
+                className="btn btn-warning w-100">
+                Users Table
+            </Link>
         </div>
     );
 }

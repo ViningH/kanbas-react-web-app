@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { BsFillCheckCircleFill, BsPencil, BsTrash3Fill, BsPlusCircleFill } from "react-icons/bs";
 import * as client from "./client";
 import { User } from "./client";
+import "./index.css";
 export default function UserTable() {
     const [users, setUsers] = useState<User[]>([]);
     const [user, setUser] = useState<User>({
@@ -54,39 +55,48 @@ export default function UserTable() {
     useEffect(() => { fetchUsers(); }, []);
     return (
         <div>
-            <select
-                onChange={(e) => fetchUsersByRole(e.target.value)}
-                value={role || "USER"}
-                className="form-control w-25 float-end"
-            >
-                <option value="USER">User</option>
-                <option value="ADMIN">Admin</option>
-                <option value="FACULTY">Faculty</option>
-                <option value="STUDENT">Student</option>
-            </select>
+            <div className="wd-align-right">
+                <label htmlFor="fetch-role">Fetch by Role:</label>
+                <select
+                    id="fetch-role"
+                    onChange={(e) => fetchUsersByRole(e.target.value)}
+                    value={role || "USER"}
+                    className="w-25 float-end input-corners input-space"
+                >
+                    <option value="USER">User</option>
+                    <option value="ADMIN">Admin</option>
+                    <option value="FACULTY">Faculty</option>
+                    <option value="STUDENT">Student</option>
+                </select>
+            </div>
             <h1>User Table</h1>
             <table className="table">
                 <thead>
                     <tr>
                         <th>Username</th>
+                        <th>Password (for new)</th>
                         <th>First Name</th>
                         <th>Last Name</th>
                         <th>Role</th>
                         <th>&nbsp;</th>
+                        <th>&nbsp;</th>
                     </tr>
                     <tr>
                         <td>
-                            <input value={user.username} onChange={(e) =>
+                            <input className="input-small input-corners" value={user.username} onChange={(e) =>
                                 setUser({ ...user, username: e.target.value })} />
-                            <input value={user.password} onChange={(e) =>
+
+                        </td>
+                        <td>
+                            <input className="input-small input-corners" value={user.password} onChange={(e) =>
                                 setUser({ ...user, password: e.target.value })} />
                         </td>
                         <td>
-                            <input value={user.firstName} onChange={(e) =>
+                            <input className="input-small input-corners" value={user.firstName} onChange={(e) =>
                                 setUser({ ...user, firstName: e.target.value })} />
                         </td>
                         <td>
-                            <input value={user.lastName} onChange={(e) =>
+                            <input className="input-small input-corners" value={user.lastName} onChange={(e) =>
                                 setUser({ ...user, lastName: e.target.value })} />
                         </td>
                         <td>
@@ -103,7 +113,9 @@ export default function UserTable() {
                                 onClick={updateUser}
                                 className="me-2 text-success fs-1 text"
                             />
-                            <BsPlusCircleFill onClick={createUser} />
+                        </td>
+                        <td>
+                            <BsPlusCircleFill onClick={createUser} className="me-2 text-success fs-1 text" />
                         </td>
                     </tr>
 
@@ -112,13 +124,17 @@ export default function UserTable() {
                     {users.map((user: any) => (
                         <tr key={user._id}>
                             <td>{user.username}</td>
+                            <td>&nbsp;</td>
                             <td>{user.firstName}</td>
                             <td>{user.lastName}</td>
                             <td>{user.role}</td>
                             <td>
-                                <button onClick={() => deleteUser(user)}>
+                                <button className="btn input-red-button me-2" onClick={() => deleteUser(user)}>
                                     <BsTrash3Fill />
                                 </button>
+
+                            </td>
+                            <td>
                                 <button className="btn btn-warning me-2">
                                     <BsPencil onClick={() => selectUser(user)} />
                                 </button>

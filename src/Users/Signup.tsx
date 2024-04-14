@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import * as client from "./client";
+import "./index.css";
 export default function Signup() {
   const [error, setError] = useState("");
   const [user, setUser] = useState({ username: "", password: "" });
@@ -17,11 +18,16 @@ export default function Signup() {
     <div>
       <h1>Signup</h1>
       {error && <div>{error}</div>}
-      <input value={user.username} onChange={(e) => setUser({
+      <label htmlFor="username" className="label-space">Username:</label>
+      <input id="username" className = "input-space input-width input-corners" value={user.username} onChange={(e) => setUser({
           ...user, username: e.target.value })} />
-      <input value={user.password} onChange={(e) => setUser({
+           <br />
+        <label htmlFor="password" className="label-space">Password:</label>
+      <input id="password" className = "input-space input-width input-corners" value={user.password} onChange={(e) => setUser({
           ...user, password: e.target.value })} />
-      <button onClick={signup}> Signup </button>
+          <br />
+      <button className = "btn btn-primary wd-button-space" onClick={signup}> Signup </button>
+      <Link to={`/Kanbas/Account/Signin`}><button className = "btn btn-primary wd-button-space">Go to Signin</button></Link>
     </div>
   );
 }
