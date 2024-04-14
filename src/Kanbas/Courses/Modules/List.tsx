@@ -16,7 +16,7 @@ function ModuleList() {
   const { courseId } = useParams();
   const modulesList = useSelector((state: KanbasState) =>
     state.modulesReducer.modules);
-  const module = useSelector((state: KanbasState) =>
+  let module = useSelector((state: KanbasState) =>
     state.modulesReducer.module);
   const dispatch = useDispatch();
   useEffect(() => {
@@ -26,18 +26,26 @@ function ModuleList() {
       );
   }, [courseId]);
   const handleAddModule = () => {
-    client.createModule(courseId, {...module, id: Date.now()}).then((module) => {
+    module = {...module, id: Date.now()};
+    console.log(module.id);
+    console.log(module._id);
+    client.createModule(courseId, module).then((module) => {
       dispatch(addModule(module));
     });
   };
   const handleDeleteModule = (moduleId: string) => {
+    console.log(moduleId);
+    console.log(module.id);
+    console.log(module._id);
     client.deleteModule(moduleId).then((status) => {
       dispatch(deleteModule(moduleId));
     });
   };
-  const handleUpdateModule = async (newmodule: { id: any; }) => {
-    const status = await client.updateModule(newmodule);
-    dispatch(updateModule(newmodule));
+  const handleUpdateModule = async () => {
+    console.log(module.id);
+    console.log(module._id);
+    const status = await client.updateModule(module);
+    dispatch(updateModule(module));
   };
   const [selectedModule, setSelectedModule] = useState(modulesList[0]);
   return (
@@ -68,7 +76,7 @@ function ModuleList() {
         <div className="wd-align-right">
           <button className="wd-add-button"
             onClick={handleAddModule}>Add</button>
-          <button className="wd-edit-button" onClick={() => handleUpdateModule(module)}>
+          <button className="wd-edit-button" onClick={() => handleUpdateModule()}>
             Update
           </button>
         </div>
@@ -84,7 +92,7 @@ function ModuleList() {
                 {module.name}
                 <span className="float-end">
                   <button className="wd-red-delete-button"
-                    onClick={() => handleDeleteModule(module.id)}>
+                    onClick={() => handleDeleteModule(module._id)}>
                     Delete
                   </button>
                   <button className="wd-edit-button"

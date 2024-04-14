@@ -2,9 +2,9 @@ import axios from "axios";
 const API_BASE = process.env.REACT_APP_BASE_API_URL;
 const COURSES_API = `${API_BASE}/api/courses`;
 const MODULES_API = `${API_BASE}/api/modules`;
-export const updateModule = async (module: { id: any; }) => {
+export const updateModule = async (module: { _id: any; }) => {
     const response = await axios.
-      put(`${MODULES_API}/${module.id}`, module);
+      put(`${MODULES_API}/${module._id}`, module);
     return response.data;
   };
   
